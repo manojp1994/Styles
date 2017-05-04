@@ -1,0 +1,108 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    
+    <title>Material Design Bootstrap</title>
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.0/css/font-awesome.min.css">
+
+    <!-- Bootstrap core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Material Design Bootstrap -->
+    <link href="css/mdb.min.css" rel="stylesheet">
+
+    <!-- Your custom styles (optional) -->
+    <link href="css/style.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+</head>
+
+<div style="background-color:#00FFFF;">
+<body><br>
+<div>
+    <div class="container">
+            <div class="panel panel-default">
+                    <div class="panel-body">
+        <form role="form" action="/Styles/logout/" method="get">
+            <button type="submit" class="btn btn-primary" type="submit" style="float:right;margin-top:1px;margin-right:25px;" name="action"> <b class="material-icons right" >Logout</b></button>
+        </form>
+                    </div> 
+            </div> 
+    </div>
+</div><br><br>
+<center>
+    <p>
+    {% for i in branch %}
+        <h1>{{ salon }}</h2> 
+        <h2>{{ i.name }}</h2>
+        <h4>{{ i.address }}</h4>
+        <h4>{{ i.contactnumber }}</h4>
+        <b><h4><a href="{{ i.link }}"><img src="\static\Styles_app\img\Images\directions.jpg" width="42" height="42" alt = "directions"></h4></b>
+        <h4>Directions</h4>
+        <b><a href="../salonDetails/?branchId={{i.branchId}}" target="_blank">Click here for prices</a></b><br>
+        <div class="container">
+            <h2>Review {{salon}} {{i.address}}</h2>
+                <div class="panel panel-default">
+                    <div class="panel-body">
+                        <form role="form" action="/Styles/review/" method ="POST">
+                        {% csrf_token %}
+                            Name  <input type = "text" name = "Name" id = "Name" class="form-control" style="width:20%" required="required"><br><br>
+                            Review  <input type = "text" name = "reviews" id = "reviews" class="form-control" style="width:20%" required="required"><br><input type = "text" name = "branchId" id = "branchId" value= "{{i.branchId}}" class="form-control" style="width:20%; display:None;"><br>
+                        &emsp;&emsp;<button type="submit" class="btn btn-primary">Submit</button>
+                        </form>
+                    </div>
+                </div>
+        </div>
+        <div class="container">
+            <div class="panel panel-default">
+                    <div class="panel-body">
+                    <p>user reviews</p>
+            {% for j in rev %}
+                {% ifequal j.branchId|slugify i.branchId|slugify %}
+                    <div style="margin-left:-75%;">
+                        <h4><b>{{ j.Name }}</b>: {{ j.reviews }}</h4>
+                    </div>
+                {% endifequal %}
+            {% endfor %}
+        </div>
+            </div>
+                   </div>
+<h1>---------------------------------------------------------------------------------</h1><br>
+    {% endfor %}<br>
+    </p>
+    </center>
+    </div>
+    </div>
+    </div>
+     <!-- JQuery -->
+    <script type="text/javascript" src="js/jquery-2.2.3.min.js"></script>
+
+    <!-- Bootstrap tooltips -->
+    <script type="text/javascript" src="js/tether.min.js"></script>
+
+    <!-- Bootstrap core JavaScript -->
+    <script type="text/javascript" src="js/bootstrap.min.js"></script>
+
+    <!-- MDB core JavaScript -->
+    <script type="text/javascript" src="js/mdb.min.js"></script>
+</body>
+</div>
+</html>
+
+
+
+
+
+
+

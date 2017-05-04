@@ -1,0 +1,135 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    
+    <title>Material Design Bootstrap</title>
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.0/css/font-awesome.min.css">
+
+    <!-- Bootstrap core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Material Design Bootstrap -->
+    <link href="css/mdb.min.css" rel="stylesheet">
+
+    <!-- Your custom styles (optional) -->
+    <link href="css/style.css" rel="stylesheet">
+
+</head>
+<body>
+    <div>
+    <div class="container">
+            <div class="panel panel-default">
+                    <div class="panel-body">
+        <form role="form" action="/Styles/logout/" method="get">
+            <button class="btn btn-primary waves-effect waves-light col-md-1" type="submit" style="float:right;margin-top:1px;margin-right:25px;" name="action"> <b class="material-icons right" >Logout</b></button>
+        </form>
+                    </div> 
+            </div> 
+    </div>
+</div>
+    <!-- logo -->
+    
+     <!-- <h2>Registration</h2> -->
+     <h1></h1><br><br>
+                    <center>
+                        <div class="col-md-12">
+                            <div class="col-md-3">
+                            </div>
+                            <div class="col-md-6">
+                                <form role="form" action="/Styles/registration_check/" method ="POST">
+                        {% csrf_token%}
+
+                        <div class="col-md-12">
+                            <div class="col-md-4">
+            <label>FirstName:</label></div><div class="col-md-8">
+            <input type="text" class="form-control" name="firstname" id="firstname" required = "required"/></div>
+            </div><br><br><br>
+<div class="col-md-12">
+                            <div class="col-md-4">
+           <label>LastName:</label> </div><div class="col-md-8">
+            <input type="text" class="form-control" name="lastname" id="lastname" required = "required"/></div>
+            </div><br><br><br>
+            
+
+            <div class="col-md-12">
+                            <div class="col-md-4">
+           <label>Email-Id:</label></div><div class="col-md-8">
+            <input type = "text" class="form-control" name = "email" id = "email" required = "required"/></div>
+            </div><br><br><br>
+            
+
+            <div class="col-md-12">
+                            <div class="col-md-4">
+           <label>UserName:</label></div><div class="col-md-8">
+            <input type = "text" class="form-control" name = "username" id = "username" required="required" /></div>
+            </div><br><br><br>
+            
+
+            <div class="col-md-12">
+                            <div class="col-md-4">
+           <label>Password:</label></div><div class="col-md-8">
+            <input type = "password" class="form-control" name = "password" id = "password" required = "required"/></div>
+            </div><br><br><br>
+            
+
+
+            <div class="col-md-12">
+                            <div class="col-md-4">
+           <label>MobileNumber:</label></div><div class="col-md-8">
+            <input type = "text" class="form-control" name = "mobilenumber" id = "mobilenumber" required = "required"/></div>
+            </div><br><br><br>
+            
+
+            <div class="col-md-12">
+                            <div class="col-md-4">
+           <label>Address:</label></div><div class="col-md-8">
+            <textarea name="address" class="form-control" id="address" rows = "5" cols = "200" class="form-control" style="resize:none" required="required"></textarea></div>
+            </div><br><br><br>
+            
+            <div class="col-md-5" ></div>
+            <button class="btn btn-primary waves-effect waves-light col-md-6" type="submit" style="margin-top:20px" name="action"> <b class="material-icons right" >Register</b></button>
+        
+        </form>
+                            </div>
+                            <div class="col-md-3">
+                            </div>
+                        
+    </center>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+    <!-- Start your project here-->
+
+    <!-- /Start your project here-->
+    
+
+    <!-- SCRIPTS -->
+
+     <!-- JQuery -->
+    <script type="text/javascript" src="js/jquery-2.2.3.min.js"></script>
+
+    <!-- Bootstrap tooltips -->
+    <script type="text/javascript" src="js/tether.min.js"></script>
+
+    <!-- Bootstrap core JavaScript -->
+    <script type="text/javascript" src="js/bootstrap.min.js"></script>
+
+    <!-- MDB core JavaScript -->
+    <script type="text/javascript" src="js/mdb.min.js"></script>
+
+
+</body>
+
+</html>

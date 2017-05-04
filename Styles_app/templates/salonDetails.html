@@ -1,0 +1,82 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+<html lang="en">
+<title>Salon prices1</title>
+<head>
+    
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.0/css/font-awesome.min.css">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.0/css/font-awesome.min.css">
+
+    <!-- Bootstrap core CSS -->
+    <link href="{% static "Styles_app/css/bootstrap.min.css" %}" rel="stylesheet">
+
+    <!-- Material Design Bootstrap -->
+    <link href="{% static "Styles_app/css/mdb.min.css" %}"rel="stylesheet">
+
+    <!-- Your custom styles (optional) -->
+    <link href="{% static "Styles_app/css/homeStyle.css" %}"rel="stylesheet">
+
+    <!-- <!-- Bootstrap core CSS -->
+    <!-- <link href="css/bootstrap.min.css" rel="stylesheet"> -->
+
+    <!-- Material Design Bootstrap -->
+    <!-- <link href="css/mdb.min.css" rel="stylesheet"> -->
+
+    <!-- Your custom styles (optional) -->
+    <!-- <link href="css/style.css" rel="stylesheet"> -->
+
+    <!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+<!-- Optional theme -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+<!-- Latest compiled and minified JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+
+</head>
+<body>
+    </div class="col-md-8">
+    <div class="w3-container">
+  <!-- <h2>Naturals</h2> -->
+  <div class="w3-panel w3-card-8">
+    <center>
+    <p>
+        <h2>Single deals</h2><br><br>
+    <b>Haircut : {{salonDetails.Haircut}}/-</b><br><br>
+    <b>Trimming : {{salonDetails.Trimming}}/-</b><br><br>
+    <b>Shave : {{salonDetails.Shave}}/-</b><br><br>
+    <b>Body Massage : {{salonDetails.BodyMassage}}/-</b><br><br>
+    <b>Head Massage : {{salonDetails.HeadMassage}}/-</b><br><br>
+
+        <h2>Combo deals</h2><br><br>
+    <b>Haircut and more : {{salonDetails1.Haircut_and_more}}/-</b><br><br>
+    <b>Facial and Detan : {{salonDetails1.Facial_and_Detan}}/-</b><br><br>
+    <b>Bridal packages : {{salonDetails1.Bridal_packages}}/-</b><br><br>
+    <b>BodyMassage and steambath : {{salonDetails1.BodyMassage_and_steambath}}/-</b><br><br>
+    <b>HeadMassage and conditioning : {{salonDetails1.HeadMassage_and_conditioning}}/-</b><br><br>
+    <br>
+</p>
+</center>
+</div>
+<!-- JQuery -->
+    <script type="text/javascript" src="js/jquery-2.2.3.min.js"></script>
+
+    <!-- Bootstrap tooltips -->
+    <script type="text/javascript" src="js/tether.min.js"></script>
+
+    <!-- Bootstrap core JavaScript -->
+    <script type="text/javascript" src="js/bootstrap.min.js"></script>
+
+    <!-- MDB core JavaScript -->
+    <script type="text/javascript" src="js/mdb.min.js"></script>
+</body>
+</html>

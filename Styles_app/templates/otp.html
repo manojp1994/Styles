@@ -1,0 +1,86 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    
+    <title>Material Design Bootstrap</title>
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.0/css/font-awesome.min.css">
+
+    <!-- Bootstrap core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Material Design Bootstrap -->
+    <link href="css/mdb.min.css" rel="stylesheet">
+
+    <!-- Your custom styles (optional) -->
+    <link href="css/style.css" rel="stylesheet">
+
+</head>
+
+<body id="page-top">
+    <div>
+    <div class="container">
+            <div class="panel panel-default">
+                    <div class="panel-body">
+        <form role="form" action="/Styles/logout/" method="get">
+            <button class="btn btn-primary waves-effect waves-light col-md-1" type="submit" style="float:right;margin-top:1px;margin-right:25px;" name="action"> <b class="material-icons right" >Logout</b></button>
+        </form>
+                    </div> 
+            </div> 
+    </div>
+</div>
+    <!-- My custom content attempt for login access -->
+    <section class="bg-primary" id="login">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 col-lg-offset-2 text-center">
+                    <h2 class="section-heading">One Time Password</h2>
+                    <hr class="light">
+                        <form role="form" action="/Styles/otpcheck/" method="post">
+                        {% csrf_token %}
+                        <p align="center">
+                        OTP:   <input type = "password" name = "otp" id = "otp" class="form-control" style="width:20%" required="required"><br><br>                  
+                        email:   <input type = "text" name = "email" id = "email" class="form-control" style="width:20%" required="required"><br><br>
+                        &emsp;&emsp;
+                        <button type="submit" class="btn btn-default btn-xl">Check</button>&emsp;
+                        </form>
+
+                    <!-- <a href="#about" class="btn btn-default btn-xl page-scroll">Get Started!</a> -->
+                </div>
+            </div>
+        </div>
+    </section>
+
+    
+    <!-- Me adding my custom Content  -->
+    
+
+    <!-- Start your project here-->
+
+    <!-- /Start your project here-->
+    
+
+    <!-- SCRIPTS -->
+
+     <!-- JQuery -->
+    <script type="text/javascript" src="js/jquery-2.2.3.min.js"></script>
+
+    <!-- Bootstrap tooltips -->
+    <script type="text/javascript" src="js/tether.min.js"></script>
+
+    <!-- Bootstrap core JavaScript -->
+    <script type="text/javascript" src="js/bootstrap.min.js"></script>
+
+    <!-- MDB core JavaScript -->
+    <script type="text/javascript" src="js/mdb.min.js"></script>
+
+</body>
+
+</html>
